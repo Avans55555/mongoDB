@@ -18,7 +18,7 @@ function db(callback){
   mongoose.connection.on('open',function(error){
     if(error){
       console.log("数据库连接失败",error)
-      console.log('失败')
+      callback('connect failed')
     }else{
       console.log('数据库连接成功')
       callback();
